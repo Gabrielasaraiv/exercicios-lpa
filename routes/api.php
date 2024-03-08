@@ -97,7 +97,7 @@ Route::get('receber/numeros', function(Request $request){
             return 'A média é =' . $resultado; 
             
             }); 
-            
+
 
             Route::get('receber/numero', function (Request $request) { 
 
@@ -108,5 +108,20 @@ Route::get('receber/numeros', function(Request $request){
             $resultado = $segundoNumero / $primeiroNumero; 
             
             return $segundoNumero . '/' . $primeiroNumero . '=' . $resultado; 
+            
+            }); 
+
+
+            Route::get('receber/numeros', function (Request $request) { 
+
+                $primeiroNumero= $request->input('n1'); 
+            
+                 
+            
+            $resultado = $primeiroNumero * 2; 
+            
+             
+            
+            return 'O dobro de ' . $primeiroNumero . ' é igual a: ' . $resultado; 
             
             }); 
