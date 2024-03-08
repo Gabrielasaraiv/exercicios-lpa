@@ -168,3 +168,15 @@ Route::get('receber/numeros', function(Request $request){
                     . '% sendo assim, o salário final é de ' . $salarioFinal; 
                     
                     }); 
+
+                    Route::get('recompensa', function(Request $request){ 
+
+                        $valorDaCompra = $request->input('valordacompra'); 
+                        
+                        $pontos = $valorDaCompra / 10; 
+                        
+                        return 'o valor da compra foi de ' . $valorDaCompra . ' e a quantidade de pontos ganhos foi de '  
+                        
+                        . $pontos; 
+                        
+                        });
