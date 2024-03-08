@@ -180,3 +180,16 @@ Route::get('receber/numeros', function(Request $request){
                         . $pontos; 
                         
                         });
+
+
+                        Route::get('comissao', function(Request $request){ 
+
+                            $vendas = $request->input('vendas'); 
+                            
+                            $comissao = $vendas * 5 /100; 
+                            
+                             
+                            
+                            return 'o total de vendas foi de R$' . $vendas . ' e a comissão tem o valor de R$' . $comissao; 
+                            
+                            }); 
