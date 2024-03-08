@@ -79,3 +79,21 @@ Route::get('receber/numeros', function(Request $request){
         return $primeiroNumero . 'x' . $segundoNumero . '=' . $resultado; 
         
         }); 
+
+        Route::get('receber/notas', function(Request $request){ 
+
+            $primeiraNota =$request->input('n1'); 
+            
+            $segundaNota = $request->input('n2'); 
+            
+            $terceiraNota = $request->input('n3'); 
+            
+            $quartaNota = $request->input('n4'); 
+            
+            $quintaNota = $request->input('n5'); 
+            
+            $resultado = ($primeiraNota +$segundaNota + $terceiraNota + $quartaNota + $quintaNota)/ 5; 
+            
+            return 'A média é =' . $resultado; 
+            
+            }); 
