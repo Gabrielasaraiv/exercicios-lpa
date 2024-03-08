@@ -208,8 +208,8 @@ Route::get('receber/numeros', function(Request $request){
                                 return 'o numero de dias é ' . $numeroDeDias . ' e a quantidade de horas desses dias é de ' . $horas . 'horas. Essa quantidade de dias tem ' 
                                 
                                 . $minutos . 'minutos. Essa quantidade de dias também tem ' . $segundos . 'segundos.'; 
+                            });
                                 
-                                }); 
 
 
                                 Route::get('receber/total', function(Request $request){
