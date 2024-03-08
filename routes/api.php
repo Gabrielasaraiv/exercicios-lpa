@@ -152,3 +152,19 @@ Route::get('receber/numeros', function(Request $request){
                 return 'O valor final do produto é de ' . $valorFinal; 
                 
                 }); 
+
+                Route::get('aumento/salarial', function(Request $request){ 
+
+                    $salarioInicial = $request->input('salarioInicial'); 
+                    
+                    $porcentagem = $request->input('porcentagem'); 
+                    
+                    $aumento = $porcentagem * $salarioInicial / 100; 
+                    
+                    $salarioFinal = $salarioInicial + $aumento; 
+                    
+                    return 'o salário inicial é de ' . $salarioInicial . ' e o percentual de aumento é de ' . $porcentagem  
+                    
+                    . '% sendo assim, o salário final é de ' . $salarioFinal; 
+                    
+                    }); 
