@@ -31,3 +31,15 @@ Route::get('receber/nome/ano/nascimento/cidade/natal', function(Request $request
      . $cidade; 
 
 }); 
+
+Route::get('receber/numeros', function(Request $request){ 
+
+    $primeiroNumero = $request->input('primeiroNumero'); 
+
+    $segundoNumero = $request->input('segundoNumero'); 
+
+    $resultado = $primeiroNumero + $segundoNumero; 
+
+    return $primeiroNumero . '+' . $segundoNumero . '=' . $resultado; 
+
+}); 
