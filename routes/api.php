@@ -193,3 +193,20 @@ Route::get('receber/numeros', function(Request $request){
                             return 'o total de vendas foi de R$' . $vendas . ' e a comissão tem o valor de R$' . $comissao; 
                             
                             }); 
+
+
+                            Route::get('numero/dias', function(Request $request){ 
+
+                                $numeroDeDias = $request->input('dias'); 
+                                
+                                $horas = $numeroDeDias *24; 
+                                
+                                $minutos = $horas *60 ; 
+                                
+                                $segundos= $minutos *60; 
+                                
+                                return 'o numero de dias é ' . $numeroDeDias . ' e a quantidade de horas desses dias é de ' . $horas . 'horas. Essa quantidade de dias tem ' 
+                                
+                                . $minutos . 'minutos. Essa quantidade de dias também tem ' . $segundos . 'segundos.'; 
+                                
+                                }); 
