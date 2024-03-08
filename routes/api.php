@@ -97,3 +97,16 @@ Route::get('receber/numeros', function(Request $request){
             return 'A média é =' . $resultado; 
             
             }); 
+            
+
+            Route::get('receber/numero', function (Request $request) { 
+
+                $primeiroNumero= $request->input('n1'); 
+            
+                $segundoNumero = $request->input('n2'); 
+            
+            $resultado = $segundoNumero / $primeiroNumero; 
+            
+            return $segundoNumero . '/' . $primeiroNumero . '=' . $resultado; 
+            
+            }); 
