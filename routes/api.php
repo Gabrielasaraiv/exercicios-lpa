@@ -67,3 +67,15 @@ Route::get('receber/numeros', function(Request $request){
     return $primeiroNumero . '/' . $segundoNumero . '=' . $resultado; 
     
     });
+
+    Route::get('receber/numero', function(Request $request){ 
+
+        $primeiroNumero = $request->input('n1'); 
+        
+        $segundoNumero =$request->input('n2'); 
+        
+        $resultado = $primeiroNumero *$segundoNumero; 
+        
+        return $primeiroNumero . 'x' . $segundoNumero . '=' . $resultado; 
+        
+        }); 
