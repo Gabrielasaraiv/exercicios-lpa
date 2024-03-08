@@ -125,3 +125,16 @@ Route::get('receber/numeros', function(Request $request){
             return 'O dobro de ' . $primeiroNumero . ' é igual a: ' . $resultado; 
             
             }); 
+
+
+            Route::get('area/retangulo', function (Request $request) { 
+
+                $primeiroLado = $request->input('L1'); 
+            
+                $segundoLado = $request->input('L2'); 
+            
+                $resultado = $primeiroLado * $segundoLado; 
+            
+                return 'Os lados de um retângulo são ' . $primeiroLado . ' e ' . $segundoLado . ' sendo assim, a área do retângulo é ' . $resultado; 
+            
+            }); 
