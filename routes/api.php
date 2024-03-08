@@ -43,3 +43,15 @@ Route::get('receber/numeros', function(Request $request){
     return $primeiroNumero . '+' . $segundoNumero . '=' . $resultado; 
 
 }); 
+
+Route::get('receber/numeros', function(Request $request){ 
+
+    $primeiroNumero = $request->input('primeiroNumero'); 
+
+    $segundoNumero = $request->input('segundoNumero'); 
+
+    $resultado = $primeiroNumero - $segundoNumero; 
+
+    return $primeiroNumero . '-' . $segundoNumero . '=' . $resultado; 
+
+}); 
