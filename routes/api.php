@@ -17,3 +17,17 @@ Route::get('receber/name/idade', function(Request $request){
     return 'Meu nome é ' . $nome . ', e minha idade é ' . $idade ; 
 
 }); 
+
+Route::get('receber/nome/ano/nascimento/cidade/natal', function(Request $request){ 
+
+    $nome = $request->input('nome'); 
+
+    $ano = $request->input('ano'); 
+
+    $cidade = $request->input('cidade'); 
+
+    return 'Meu nome é ' . $nome . ', nasci no ano de ' . $ano . ' e minha cidade natal é ' 
+
+     . $cidade; 
+
+}); 
