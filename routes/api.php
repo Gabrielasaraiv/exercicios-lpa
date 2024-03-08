@@ -138,3 +138,17 @@ Route::get('receber/numeros', function(Request $request){
                 return 'Os lados de um retângulo são ' . $primeiroLado . ' e ' . $segundoLado . ' sendo assim, a área do retângulo é ' . $resultado; 
             
             }); 
+
+            Route::get('valores', function(Request $request){ 
+
+                $preçoOriginal = $request->input('preçoInicial'); 
+                
+                $porcentagem = $request->input('porcentagem'); 
+                
+                $desconto = $porcentagem * $preçoOriginal / 100; 
+                
+                $valorFinal = $preçoOriginal - $desconto; 
+                
+                return 'O valor final do produto é de ' . $valorFinal; 
+                
+                }); 
