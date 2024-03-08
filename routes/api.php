@@ -216,5 +216,5 @@ Route::get('receber/numeros', function(Request $request){
                                     $preçoProduto = $request->input('preço');
                                     $quantidade = $request->input('quantidade');
                                     $total= $preçoProduto * $quantidade;
-                                    return 'O preço do produto é de R$' . $preçoProduto . ' e a quantidade comprada foi de '. $quantidade . ' vezes. Sendo assim, o toal da compra é de R$' . $total
+                                    return 'O preço do produto é de R$' . $preçoProduto . ' e a quantidade comprada foi de '. $quantidade . ' vezes. Sendo assim, o toal da compra é de R$' . $total;
                                 });
