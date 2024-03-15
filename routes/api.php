@@ -218,3 +218,18 @@ Route::get('receber/numeros', function(Request $request){
                                     $total= $preçoProduto * $quantidade;
                                     return 'O preço do produto é de R$' . $preçoProduto . ' e a quantidade comprada foi de '. $quantidade . ' vezes. Sendo assim, o toal da compra é de R$' . $total;
                                 });
+
+
+                                Route::get('exemplo/condicao', function(Request $request){
+                                    $idade = $request->input('idade');
+                                    $mensagem = "";
+                                    if($idade >= 18){
+                                        $mensagem = "Maior de idade";
+                                    }
+                                    else{
+                                        $mensagem = "Menor de idade";
+            
+                                    }
+                                    return $mensagem;
+
+                                });
