@@ -26,13 +26,13 @@ Cd exercicios-lpa
 ```
 composer update
 ```
-4. Iniciando o servidor
+4. Acessar o Virtual Studio Code
+```
+code .
+```
+5. Iniciando o servidor
 ```
 php artisan serve --port=80
-```
-5. Acessar o Virtual Studio Code
-```
-code.
 ```
 6. Importar o arquivo do Insomnia
 
