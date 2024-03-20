@@ -218,11 +218,76 @@ Route::get('exemplo/condicao', function (Request $request) {
 });
 
 
-Route::get('verifica/idade', function(Request $request){
+Route::get('verifica/idade', function (Request $request) {
     $idade = $request->input('idade');
-    if($idade < 18){
+    if ($idade < 18) {
         return "menor de idade";
     } else {
         return "maior de idade";
+    }
+});
+
+
+Route::get('verificar/par', function (Request $request) {
+    $numero = $request->input('numero');
+    if ($numero % 2 == 0) {
+        return "par";
+    } else {
+        return "impar";
+    }
+});
+
+
+Route::get('verificar/numero', function (Request $request) {
+    $numero = $request->input('numero');
+    if ($numero > 10) {
+        return "Este número é maior que 10";
+    } else  if ($numero == 10) {
+        return "Este número é igual a 10";
+    } else {
+        return "Este número é menor que 10";
+    }
+});
+
+
+Route::get('temperatura', function(Request $request){
+    $temperatura = $request->input('temperatura');
+    if($temperatura >= 30){
+        return "A temperatura é de " . $temperatura . "°C. Está quente!";
+    } else {
+        return "A temperatura é de " . $temperatura . "°C. Não está quente.";
+    }
+});
+
+
+
+Route::get('verificar/numero', function(Request $request){
+    $numero = $request->input('numero');
+    if($numero > 0){
+        return "o número é positivo";
+    } else if ($numero == 0){
+        return "O número é 0 ";
+    } else {
+        return "O número é negativo";
+    }
+});
+
+
+Route::get('numeros', function(Request $request){
+    $primeiroNumero = $request->input('primeiroNumero');
+    $segundoNumero = $request->input('segundoNumero');
+    if($primeiroNumero > $segundoNumero){
+        return "O maior número é " . $primeiroNumero;
+    } else{
+        return "O maior número é " . $segundoNumero;
+    }
+});
+
+Route::get('numero/divisivel', function(Request $request){
+    $numero = $request->input('numero');
+    if($numero % 3 == 0){
+        return "O número é divisível";
+    }else {
+        return "O número não é divisível";
     }
 });
