@@ -36,6 +36,12 @@ php artisan serve --port=80
 ```
 6. Importar o arquivo do Insomnia
 
+Comandos Úteis:
+```
+git config --global user.email gabrielasaraivaaraujo358@gmail.com
+git config --global user.name Gabrielasaraiv
+```
+
 
 ## Licença
 
