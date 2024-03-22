@@ -437,7 +437,7 @@ Route::get('exercicio14', function (Request $request) {
     }
 });
 
-Route::get('exercicio15', function (Request $request) {
+Route::get('exercicio16, function (Request $request) {
     $primeiroNumero = $request->input('primeiroNumero');
     $segundoNumero = $request->input('segundoNumero');
     if ($primeiroNumero < $segundoNumero) {
